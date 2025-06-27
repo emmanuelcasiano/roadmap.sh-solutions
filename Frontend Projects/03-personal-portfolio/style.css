@@ -1,0 +1,235 @@
+:root {
+    --mb-sm: 15px;
+    --mb-md: 30px;
+    --mb-lg: 45px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px rosybrown solid; */
+}
+body {
+    /* font-family: sans-serif; */
+    text-align: center;
+    /* border: 1px solid; */
+}
+img {
+    display: block;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    margin-bottom: var(--mb-md);
+}
+
+.nav .nav__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* margin-bottom: var(--mb-sm); */
+
+    margin: var(--mb-sm) 0 var(--mb-sm) 0;
+
+    text-decoration: none;
+    color: #000;
+}
+
+.nav .nav__menu {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    list-style-type: none;
+    margin: 0 auto;
+    max-width: 235px;
+    /* margin: 0 150px 0 150px; */
+}
+
+.nav .nav__menu .slanted {
+    border-right: 1px solid #555;
+    transform: skew(-15deg);
+    margin: 0 5px;
+}
+/* .nav .nav__menu li::after {
+    content: " / ";
+} */
+
+.nav .nav__menu li:last-child:after {
+    content: "";
+}
+
+.hero {
+    padding-bottom: var(--mb-md);
+}
+section {
+    border-bottom: 3px solid #000;
+}
+section h2 {
+    border-bottom: 3px solid #000;
+    padding: 10px 0 10px 0;
+}
+
+.projects ul > li {
+    list-style-type: none;
+    border-bottom: 2px solid #000;
+    padding: 8px 0 8px 0;
+    background-color: lightgray;
+}
+
+.experience .experience__item {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+    background-color: lightgrey;
+}
+
+.experience .experience__item h3,
+.experience .experience__item p {
+    padding-bottom: 8px;
+}
+
+.experience .experience__item a {
+    text-decoration: none;
+    color: rgb(50, 149, 255);
+}
+
+.education {
+    text-align: left;
+    padding: 0 20px 20px 20px;
+}
+
+.education h2 {
+    text-align: center;
+    border-bottom: none;
+}
+
+.education p {
+    margin-bottom: var(--mb-sm);
+}
+
+.education ul {
+    list-style-type: none;
+}
+
+.education ul li::before {
+    content: "- ";
+}
+
+.reviews {
+    padding: 0 20px 20px 20px;
+}
+
+.reviews h2 {
+    border-bottom: none;
+}
+
+.reviews .reviews__list .review {
+    list-style-type: none;
+    /* margin-bottom: var(--mb-sm); */
+    display: none;
+}
+
+.reviews .reviews__list .review:first-child {
+    display: block;
+}
+
+.reviews .reviews__list .review blockquote {
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 25px 10px 25px 30px;
+    text-align: left;
+}
+
+.reviews .reviews__list .review blockquote p {
+    margin-bottom: var(--mb-sm);
+}
+
+.reviews .reviews__list .review blockquote footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    padding: var(--mb-sm) 0 var(--mb-sm) 0;
+}
+
+@media screen and (min-width: 700px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--mb-sm) var(--mb-sm) 0 var(--mb-sm);
+    }
+    .nav .nav__logo {
+        flex-direction: row;
+        margin: unset;
+    }
+    .nav .nav__menu {
+        margin: unset;
+    }
+
+    .row {
+        display: flex;
+    }
+    .row section {
+        border: 1px solid #000;
+    }
+    .row > section:not(:first-child) {
+        flex: 1;
+    }
+
+    .row > section:first-child {
+        width: 30%;
+        max-width: 280px;
+    }
+
+    section h2 {
+        border-bottom: unset;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .projects ul > li {
+        background-color: unset;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .projects ul > li:last-child {
+        border-bottom: unset;
+    }
+
+    .experience .experience__item {
+        background-color: unset;
+    }
+    .experience .experience__item:last-child {
+        border-bottom: unset;
+    }
+
+    .education h2 {
+        text-align: left;
+    }
+
+    .reviews {
+        border-bottom: unset;
+        margin-bottom: 50px;
+    }
+    .reviews .reviews__list {
+        display: flex;
+        padding-left: 20px;
+        gap: var(--mb-sm);
+    }
+    .reviews .reviews__list .review {
+        display: block;
+    }
+
+    .reviews .reviews__list .review > blockquote {
+        max-width: 300px;
+    }
+}
