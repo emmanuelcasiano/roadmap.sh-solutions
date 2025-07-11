@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid #000; */
+}
+
+.wrapper {
+    width: 350px;
+    margin: 0 auto;
+}
+/*  */
+
+.datepicker-input {
+    display: flex;
+    outline: 1px solid grey;
+    width: 100%;
+}
+
+.datepicker-input input {
+    width: 100%;
+    padding-left: 20px;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.calendar {
+    border: 1px solid #000;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 60px;
+}
+
+.calendar-header img {
+    height: 32px;
+    cursor: pointer;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays .day-name {
+    padding: 8px 0;
+}
+
+.calendar-days .day {
+    padding: 15px;
+}
+
+.calendar-weekdays .day-name,
+.calendar-days .day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar-days {
+    border-top: 2px solid;
+}
+.calendar-days .day {
+    border: 1px solid #000;
+}
