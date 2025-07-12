@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 650px;
+    margin: 50px auto 0;
+}
+
+.form-container {
+    display: flex;
+    border: 2px solid #333;
+    border-radius: 20px;
+    padding: 42px 30px;
+}
+
+.form-container > * {
+    flex: 1;
+}
+
+.form-container form {
+    margin-right: 5%;
+}
+
+.form-container .form-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.form-input-group input {
+    padding: 8px 12px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 18px;
+    outline: none;
+}
+
+.form-input-group.error input,
+.form-input-group.error input::placeholder,
+.form-input-group.error input:focus {
+    border-color: #b30000;
+    color: #b30000;
+}
+
+.form-input-group input:focus {
+    border-color: rgb(11, 11, 255);
+}
+
+.form-input-group.password {
+    position: relative;
+}
+.form-input-group.password::after {
+    content: "";
+    position: absolute;
+    top: 53%;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    background-image: url("img/eye.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #b30000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.profile-completion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.profile-completion .profile-completion__title {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.profile-completion .profile-completion__requirements {
+    background-color: #e3e3e3;
+    height: auto;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.profile-completion .profile-completion__requirements ul {
+    list-style: none;
+}
+
+.profile-completion .profile-completion__requirements ul li {
+    margin-bottom: 12px;
+}
+
+.profile-completion__requirements ul li.checked {
+    color: #636363;
+    text-decoration: line-through;
+}
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#000 0% 65%, /* progress color up to 75% */ #bbb 65% 100% /* background color */);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    margin-bottom: 30px;
+
+    transform: rotate(125deg);
+}
+
+.progress-circle::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.progress-circle .value {
+    padding: 0 20px;
+    transform: rotate(235deg);
+    font-size: 24px;
+}
+
+@media screen and (max-width: 830px) {
+    .wrapper {
+        margin: 50px 10% 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .form-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .form-container form {
+        margin-right: unset;
+    }
+    .profile-completion__requirements {
+        width: 100%;
+    }
+    .profile-completion__title {
+        margin-top: 24px;
+    }
+}

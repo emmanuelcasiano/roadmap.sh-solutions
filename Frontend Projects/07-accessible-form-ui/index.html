@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Accessible Form UI - roadmap.sh challenge" />
+        <title>Accessible Form UI</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="form-container">
+                <form action="">
+                    <div class="form-input-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="full-name" id="full-name" placeholder="What should we call you?" />
+                    </div>
+                    <div class="form-input-group error">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Email" />
+                        <span class="error-message">Email is already taken</span>
+                    </div>
+                    <div class="form-input-group password">
+                        <label for="password">Enter Password</label>
+                        <input type="password" name="password" id="password" placeholder="xxxxxxxx" />
+                    </div>
+                    <div class="form-input-group password">
+                        <label for="c_password">Confirm Password</label>
+                        <input type="password" name="c_password" id="c_password" placeholder="xxxxxxxx" />
+                    </div>
+
+                    <button class="btn">Update Profile</button>
+                </form>
+
+                <div class="profile-completion">
+                    <div class="progress-circle">
+                        <div class="value">65%</div>
+                    </div>
+                    <h3 class="profile-completion__title">Profile Completeness</h3>
+                    <div class="profile-completion__requirements">
+                        <ul>
+                            <li class="checked">Create Account</li>
+                            <li class="checked">Update Roadmap Progress</li>
+                            <li class="checked">Setup Public Profile</li>
+                            <li>Complete your first project</li>
+                            <li>Invite your friends</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
